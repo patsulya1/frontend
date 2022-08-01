@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+<attribute name="id" value="html-body"/>
+
+
+
+
+<move element="navigation.sections" destination="header-wrapper" after="logo"/>
+<move element="authorization-link" destination="header-wrapper" after="navigation.sections"/>
+<move element="wish-list-link" destination="header-wrapper" after="authorization-link"/>
+
+
+<referenceContainer name="compare-link-wrapper" remove="true"/>
+<referenceBlock name="header.panel" remove="true"/>
+
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <move element="form.subscribe" destination="footer-container" before="-"/>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-footer">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">1</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

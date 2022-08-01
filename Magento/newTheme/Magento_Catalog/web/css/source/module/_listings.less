@@ -1,8 +1,4 @@
 // /**
-//  * Copyright © Magento, Inc. All rights reserved.
-//  * See COPYING.txt for license details.
-//  */
-
 //
 //  Variables
 //  ---------------------------------------------
@@ -24,9 +20,6 @@
 & when (@media-common =true) {
 
     //  Product Lists
-    .products {
-        margin: @indent__l 0;
-    }
 
     .product {
         &-items {
@@ -66,6 +59,26 @@
                 max-width: 100%;
                 width: 152px;
 
+                &:hover {
+                    .our-product & {
+                        .actions-primary button {
+                            visibility: visible;
+                            transform: translateX(0%);
+                            transition: all .4s ease;
+                        }
+
+                        .actions-secondary {
+                            visibility: visible;
+                            transform: translateY(-350%);
+                            transition: all .4s ease;
+                        }
+
+                        .price-box {
+                            display: none;
+                        }
+                    }
+                }
+
                 .page-products & {
                     width: 240px;
                 }
@@ -75,6 +88,7 @@
                 .product3 & {
                     display: none;
                 }
+                
 
                 font-size: 0;
 
@@ -87,6 +101,12 @@
                     font-size: 1.4rem;
                     vertical-align: middle;
                     white-space: nowrap;
+                    background: rgba(255, 255, 255, 0.96);
+                    padding: 20px 2px;
+                    position: relative;
+                    z-index: 11;
+                    visibility: hidden;
+                    transform: translateY(-195%);
 
                     >button.action {
                         .lib-button-reset();
@@ -100,17 +120,6 @@
                         &:extend(.abs-actions-addto-gridlist all);
 
                         &:before {
-                            .our-product & {
-                                width: 100%;
-                                background: rgba(255, 255, 255, 0.96);
-                                padding: 20px 2px;
-                                position: relative;
-                                z-index: 11;
-                                /* top: 67%; */
-                                /* left: 26%; */
-                                transform: translateX(-15%) translateY(-567%);
-                            }
-
                             margin: 0;
                         }
 
@@ -122,13 +131,16 @@
 
                 .action.primary {
                     .our-product & {
-                        background: #ffffff;
+                        background: 0 0;
                         border: none;
                         border-radius: 0;
                         letter-spacing: 1px;
                         color: #222;
                         border-bottom: 1px solid #222;
                         padding-bottom: 10px;
+                        text-transform: uppercase;
+                        visibility: hidden;
+                        transform: translateX(-50%);
                     }
                 }
             }
@@ -439,7 +451,7 @@
             }
 
             .product-item {
-                margin-left: 2%;
+                margin-left: 3%;
                 padding: 0;
                 width: calc(~'(100% - 6%) / 4');
 
