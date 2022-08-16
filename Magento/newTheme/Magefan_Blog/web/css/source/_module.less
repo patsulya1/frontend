@@ -2,22 +2,37 @@
     clear: none;
 }
 
-.post-list-wrapper.blog-widget-recent:not(.blog-widget-recent-masonry)
-.post-holder {
+.post-list-wrapper.blog-widget-recent:not(.blog-widget-recent-masonry) .post-holder {
     width: 31.333333%;
 }
 
-.post-list .post-header .post-title a{
+.post-list .post-header .post-title a {
     color: #222;
     font-size: 14px;
     text-transform: uppercase;
 }
 
+.post-holder .post-header .post-info .item::after {
+    display: none;
+}
 
-.post-holder .post-header .post-info .item {
-    color: #888;
-    font-size: 13px;
-    font-style: italic;
+.post-holder .post-header .post-info .value {
+
+    &:before {
+        content: "\e612";
+        font-family: 'luma-icons';
+        color: #222;
+        font-size: 14px;
+        padding-right: 5px;
+    }
+}
+
+.post-holder .post-header .post-info {
+
+
+    .post-categories {
+        display: none;
+    }
 }
 
 .blog-widget-recent .post-description .post-text-hld {

@@ -1,0 +1,92 @@
+& when (@media-common =true) {
+
+    .header-arm-pop_up {
+        .mega_menu__inner-list {
+            width: 1280px;
+            left: -340px !important;
+        }
+
+        .row-pop_up {
+            padding: 20px;
+            background: #222;
+        }
+
+        .column-pop_up {
+            flex-direction: row !important;
+            align-items: center;
+
+            .text_icon-pop_up {
+                h6 {
+                    margin: 0;
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: @color-exampleproject__white ;
+                }
+
+                p {
+                    color: #777;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .icon3-pop_up {
+            width: 50px;
+            height: 50px;
+            background: @color-exampleproject__white ;
+            border-radius: 50%;
+            padding: 15px;
+        }
+
+        .navigation {
+            .submenu {
+                background: #222;
+            }
+        }
+
+
+        .ui-menu-item {
+            ul {
+
+                li {
+                    transition: all .5s ease;
+                    color: #ddd;
+                    font-size: 20px;
+
+                    &:hover {
+                        list-style: disc;
+                        margin-left: 30px;
+                    }
+
+
+                    a {
+                        font-size: 14px;
+                        padding: 8px 8px !important;
+
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .ui-menu {
+                display: block !important;
+                background: #222;
+            }
+        }
+
+        .h-pop_up {
+            margin-top: 0;
+            color: #ddd;
+            font-size: 14px;
+            padding-left: 14px
+        }
+    }
+
+    .pop-up-text_bottom {
+        color: #777;
+        font-weight: 400;
+    }
+}

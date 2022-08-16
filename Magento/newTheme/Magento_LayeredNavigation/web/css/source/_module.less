@@ -143,8 +143,16 @@
                 }
 
                 .active>& {
-                    .lib-icon-font-symbol(@_icon-font-content: @icon-up,
-                        @_icon-font-position: after);
+                    &:after {
+                        position: absolute;
+                        right: 0px;
+                        top: 5px;
+                        rotate: 90%;
+                        transform: rotate(0deg);
+                        width: 20px;
+                        height: 15px;
+                        color: #888;
+                    }
                 }
             }
 

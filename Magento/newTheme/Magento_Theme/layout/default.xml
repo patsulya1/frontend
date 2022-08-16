@@ -5,16 +5,35 @@
     <body>
 <attribute name="id" value="html-body"/>
 
+<referenceContainer name="header-wrapper">
+<block name="Mega_Menu" class="Snowdog\Menu\Block\Menu">
+   <arguments>
+      <argument name="menu" xsi:type="string">Mega_Menu</argument>
+   </arguments>
+</block>
+</referenceContainer>
 
 
-
-<move element="navigation.sections" destination="header-wrapper" after="logo"/>
+<move element="navigation.sections" destination="header-wrapper" />
 <move element="authorization-link" destination="header-wrapper" after="navigation.sections"/>
 <move element="wish-list-link" destination="header-wrapper" after="authorization-link"/>
+<move element="minicart" destination="header-wrapper" before="wish-list-link" />
+<move element="top.search" destination="header-wrapper" after="-" />
+ 
+<referenceContainer name="header-wrapper">
+            <container name="user.activity" as="userActivity" label="User Activity" htmlTag="div" htmlClass="header-user-activity" after="navigation.sections" />
+        </referenceContainer>
+
+        <move element="authorization-link" destination="user.activity" before="-"/>
+        <move element="wish-list-link" destination="user.activity" after="authorization-link" />
+        <move element="top.search" destination="user.activity" after="-" />
+        <move element="minicart" destination="user.activity" before="top.search" />
+
 
 
 <referenceContainer name="compare-link-wrapper" remove="true"/>
-<referenceBlock name="header.panel" remove="true"/>
+<!-- <referenceBlock name="header.panel" remove="true"/> -->
+<referenceContainer name="header.panel.wrapper" remove="true"/>
 
         <referenceBlock name="copyright" remove="true"/>
         <referenceBlock name="footer_links" remove="true"/>
@@ -28,3 +47,4 @@
         </referenceContainer>
     </body>
 </page>
+
