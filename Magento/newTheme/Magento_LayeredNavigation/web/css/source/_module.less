@@ -382,7 +382,8 @@
             .sidebar-main {
                 .lib-vendor-prefix-order(0);
                 padding: 0;
-                &.slick-slider{
+
+                &.slick-slider {
                     margin: 20px 0;
                 }
             }
@@ -396,6 +397,32 @@
         .columns {
             .sidebar-main {
                 padding: 0;
+
+                .sidebar-categories {
+                    h3 {
+                        display: none;
+                    }
+
+                    .category-list {
+                        padding: 0;
+
+                        .category-item {
+                            font-weight: 600;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            padding-bottom: 18px;
+                            margin-bottom: 20px;
+                            letter-spacing: 1px;
+                            position: relative;
+                            display: block;
+                            border-bottom: 1px solid #eee;
+
+                            a {
+                                color: #222;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
